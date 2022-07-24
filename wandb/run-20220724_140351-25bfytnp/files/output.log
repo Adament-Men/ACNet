@@ -1,0 +1,11 @@
+INFO: Starting training:
+        Epochs:          5
+        Batch size:      2
+        Learning rate:   2e-05
+        Training size:   9001
+        Validation size: 1000
+        Checkpoints:     True
+        Device:          cuda
+        Images scaling:  1.0
+        Mixed Precision: False
+

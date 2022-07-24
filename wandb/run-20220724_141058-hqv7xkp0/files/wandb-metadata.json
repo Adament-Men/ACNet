@@ -1,0 +1,24 @@
+{
+    "os": "Linux-5.4.0-100-generic-x86_64-with-glibc2.10",
+    "python": "3.8.0",
+    "heartbeatAt": "2022-07-24T06:11:02.225692",
+    "startedAt": "2022-07-24T06:10:58.058506",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 1,
+    "cpu_count": 112,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/root/autodl-tmp/acnet/train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "git@github.com:Adament-Men/acnet.git",
+        "commit": "6800e1484aeddc0f30ef3926cd806df88f1ed332"
+    },
+    "email": "dsd2019@foxmail.com",
+    "root": "/root/autodl-tmp/acnet",
+    "host": "container-b39c11b43c-48bc218f",
+    "username": "root",
+    "executable": "/root/miniconda3/envs/acnet/bin/python"
+}

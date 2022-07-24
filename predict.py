@@ -90,7 +90,7 @@ if __name__ == '__main__':
     logging.info(f'Using device {device}')
 
     net.to(device=device)
-    net.load_state_dict(torch.load("./checkpoints/checkpoint_epoch5.pth", map_location=device))
+    net.load_state_dict(torch.load("./checkpoints/checkpoint_epoch16.pth", map_location=device))
 
     logging.info('Model loaded!')
 

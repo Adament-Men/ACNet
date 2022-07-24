@@ -1,0 +1,15 @@
+INFO: Starting training:
+        Epochs:          20
+        Batch size:      8
+        Learning rate:   1e-05
+        Training size:   9001
+        Validation size: 1000
+        Checkpoints:     True
+        Device:          cuda
+        Images scaling:  1.0
+        Mixed Precision: False
+Epoch 1/20:   0%|                                     | 0/9001 [00:00<?, ?img/s]/root/miniconda3/envs/acnet/lib/python3.8/site-packages/torch/nn/functional.py:1960: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+
+
+

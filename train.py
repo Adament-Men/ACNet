@@ -61,8 +61,8 @@ def dice_loss(input: Tensor, target: Tensor, multiclass: bool = False):
 
 def train_net(net,
               device,
-              epochs: int = 5,
-              batch_size: int = 2,
+              epochs: int = 20,
+              batch_size: int = 8,
               learning_rate: float = 1e-5,
               val_percent: float = 0.1,
               save_checkpoint: bool = True,
@@ -111,7 +111,7 @@ def train_net(net,
     global_step = 0
 
     # 5. Begin training
-    for epoch in range(1, epochs+1):
+    for epoch in range(1, epochs + 1):
         net.train()
         epoch_loss = 0
         with tqdm(total=n_train, desc=f'Epoch {epoch}/{epochs}', unit='img') as pbar:
@@ -132,10 +132,11 @@ def train_net(net,
                 # with torch.cuda.amp.autocast(enabled=amp):
                 masks_pred = net(images)
                 # true_masks = true_masks // 255.0
-                loss = criterion(masks_pred, true_masks)
-                    # loss += dice_loss(F.softmax(masks_pred, dim=1).float(),
-                    #            F.one_hot(true_masks, net.n_classes).permute(0, 3, 1, 2).float(),
-                    #            multiclass=True)
+                m1 = true_masks[0].cpu().numpy()
+                loss = criterion(masks_pred, true_masks) \
+                       + dice_loss(torch.sigmoid(masks_pred).float(),
+                                   true_masks.float(),
+                                   multiclass=False)
 
                 optimizer.zero_grad(set_to_none=True)
                 # grad_scaler.scale(torch.ones_like(loss)).backward()
@@ -144,7 +145,6 @@ def train_net(net,
 
                 loss.backward()
                 optimizer.step()
-
 
                 pbar.update(images.shape[0])
                 global_step += 1
@@ -191,9 +191,9 @@ def train_net(net,
 
 def get_args():
     parser = argparse.ArgumentParser(description='Train the UNet on images and target masks')
-    parser.add_argument('--epochs', '-e', metavar='E', type=int, default=5, help='Number of epochs')
-    parser.add_argument('--batch-size', '-b', dest='batch_size', metavar='B', type=int, default=2, help='Batch size')
-    parser.add_argument('--learning-rate', '-l', metavar='LR', type=float, default=2e-5,
+    parser.add_argument('--epochs', '-e', metavar='E', type=int, default=20, help='Number of epochs')
+    parser.add_argument('--batch-size', '-b', dest='batch_size', metavar='B', type=int, default=8, help='Batch size')
+    parser.add_argument('--learning-rate', '-l', metavar='LR', type=float, default=1e-5,
                         help='Learning rate', dest='lr')
     parser.add_argument('--load', '-f', type=str, default=True, help='Load model from a .pth file')
     parser.add_argument('--scale', '-s', type=float, default=1.0, help='Downscaling factor of the images')
