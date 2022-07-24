@@ -83,14 +83,14 @@ if __name__ == '__main__':
     in_files = args.input
     out_files = get_output_filenames(args)
 
-    net = ACNet(n_channels=3, n_classes=2)
+    net = ACNet(n_channels=3, n_classes=1)
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     logging.info(f'Loading model {args.model}')
     logging.info(f'Using device {device}')
 
     net.to(device=device)
-    net.load_state_dict(torch.load("./checkpoints/checkpoint_epoch3.pth", map_location=device))
+    net.load_state_dict(torch.load("./checkpoints/checkpoint_epoch5.pth", map_location=device))
 
     logging.info('Model loaded!')
 
