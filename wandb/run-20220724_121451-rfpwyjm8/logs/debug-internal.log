@@ -1,0 +1,130 @@
+2022-07-24 12:14:54,398 INFO    MainThread:63255 [internal.py:wandb_internal():90] W&B internal server running at pid: 63255, started at: 2022-07-24 12:14:54.398319
+2022-07-24 12:14:54,408 INFO    WriterThread:63255 [datastore.py:open_for_write():75] open: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/run-rfpwyjm8.wandb
+2022-07-24 12:14:54,418 DEBUG   SenderThread:63255 [sender.py:send():236] send: header
+2022-07-24 12:14:54,418 DEBUG   SenderThread:63255 [sender.py:send():236] send: run
+2022-07-24 12:14:54,425 INFO    SenderThread:63255 [sender.py:_maybe_setup_resume():493] checking resume status for None/ACNet/rfpwyjm8
+2022-07-24 12:14:55,939 DEBUG   HandlerThread:63255 [handler.py:handle_request():140] handle_request: check_version
+2022-07-24 12:14:55,942 INFO    SenderThread:63255 [dir_watcher.py:__init__():216] watching files in: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files
+2022-07-24 12:14:55,942 INFO    SenderThread:63255 [sender.py:_start_run_threads():815] run started: rfpwyjm8 with start time 1658636092
+2022-07-24 12:14:55,942 DEBUG   SenderThread:63255 [sender.py:send():236] send: summary
+2022-07-24 12:14:55,943 INFO    SenderThread:63255 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-24 12:14:55,943 DEBUG   SenderThread:63255 [sender.py:send_request():250] send_request: check_version
+2022-07-24 12:14:56,282 DEBUG   HandlerThread:63255 [handler.py:handle_request():140] handle_request: run_start
+2022-07-24 12:14:56,298 DEBUG   HandlerThread:63255 [meta.py:__init__():35] meta init
+2022-07-24 12:14:56,298 DEBUG   HandlerThread:63255 [meta.py:__init__():49] meta init done
+2022-07-24 12:14:56,298 DEBUG   HandlerThread:63255 [meta.py:probe():209] probe
+2022-07-24 12:14:56,304 DEBUG   HandlerThread:63255 [git.py:repo():29] git repository is invalid
+2022-07-24 12:14:56,305 DEBUG   HandlerThread:63255 [meta.py:_save_pip():53] save pip
+2022-07-24 12:14:56,306 DEBUG   HandlerThread:63255 [meta.py:_save_pip():67] save pip done
+2022-07-24 12:14:56,306 DEBUG   HandlerThread:63255 [meta.py:_save_conda():74] save conda
+2022-07-24 12:14:56,314 ERROR   HandlerThread:63255 [meta.py:_save_conda():83] Error saving conda packages
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/acnet/lib/python3.8/site-packages/wandb/sdk/internal/meta.py", line 79, in _save_conda
+    subprocess.call(
+  File "/root/miniconda3/envs/acnet/lib/python3.8/subprocess.py", line 340, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "/root/miniconda3/envs/acnet/lib/python3.8/subprocess.py", line 854, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/root/miniconda3/envs/acnet/lib/python3.8/subprocess.py", line 1702, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'conda'
+2022-07-24 12:14:56,317 DEBUG   HandlerThread:63255 [meta.py:_save_conda():84] save conda done
+2022-07-24 12:14:56,317 DEBUG   HandlerThread:63255 [meta.py:probe():247] probe done
+2022-07-24 12:14:56,331 DEBUG   SenderThread:63255 [sender.py:send():236] send: files
+2022-07-24 12:14:56,332 INFO    SenderThread:63255 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2022-07-24 12:14:56,360 DEBUG   HandlerThread:63255 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 12:14:56,361 DEBUG   SenderThread:63255 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 12:14:56,751 DEBUG   SenderThread:63255 [sender.py:send():236] send: telemetry
+2022-07-24 12:14:56,957 INFO    Thread-12 :63255 [dir_watcher.py:_on_file_created():269] file/dir created: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files/output.log
+2022-07-24 12:14:56,957 INFO    Thread-12 :63255 [dir_watcher.py:_on_file_created():269] file/dir created: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files/conda-environment.yaml
+2022-07-24 12:14:56,958 INFO    Thread-12 :63255 [dir_watcher.py:_on_file_created():269] file/dir created: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files/wandb-summary.json
+2022-07-24 12:14:56,958 INFO    Thread-12 :63255 [dir_watcher.py:_on_file_created():269] file/dir created: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files/requirements.txt
+2022-07-24 12:14:56,958 INFO    Thread-12 :63255 [dir_watcher.py:_on_file_created():269] file/dir created: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files/wandb-metadata.json
+2022-07-24 12:14:57,285 INFO    Thread-16 :63255 [upload_job.py:push():138] Uploaded file /tmp/tmpctu0dg6jwandb/dpbi1xzt-wandb-metadata.json
+2022-07-24 12:14:58,353 DEBUG   SenderThread:63255 [sender.py:send():236] send: config
+2022-07-24 12:15:04,954 INFO    Thread-12 :63255 [dir_watcher.py:_on_file_modified():286] file/dir modified: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files/output.log
+2022-07-24 12:15:08,971 INFO    Thread-12 :63255 [dir_watcher.py:_on_file_modified():286] file/dir modified: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files/output.log
+2022-07-24 12:15:11,756 DEBUG   HandlerThread:63255 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 12:15:11,758 DEBUG   SenderThread:63255 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 12:15:24,565 DEBUG   SenderThread:63255 [sender.py:send():236] send: stats
+2022-07-24 12:15:24,995 INFO    Thread-12 :63255 [dir_watcher.py:_on_file_modified():286] file/dir modified: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files/config.yaml
+2022-07-24 12:15:27,144 DEBUG   HandlerThread:63255 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 12:15:27,146 DEBUG   SenderThread:63255 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 12:15:42,519 DEBUG   HandlerThread:63255 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 12:15:42,520 DEBUG   SenderThread:63255 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 12:15:54,759 DEBUG   SenderThread:63255 [sender.py:send():236] send: stats
+2022-07-24 12:15:57,949 DEBUG   HandlerThread:63255 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 12:15:57,950 DEBUG   SenderThread:63255 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 12:16:13,336 DEBUG   HandlerThread:63255 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 12:16:13,337 DEBUG   SenderThread:63255 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 12:16:20,028 WARNING MainThread:63255 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2022-07-24 12:16:21,632 DEBUG   SenderThread:63255 [sender.py:send():236] send: telemetry
+2022-07-24 12:16:23,071 INFO    Thread-12 :63255 [dir_watcher.py:_on_file_modified():286] file/dir modified: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files/output.log
+2022-07-24 12:16:24,026 DEBUG   HandlerThread:63255 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-24 12:16:24,027 DEBUG   SenderThread:63255 [sender.py:send():236] send: exit
+2022-07-24 12:16:24,028 INFO    SenderThread:63255 [sender.py:send_exit():372] handling exit code: 0
+2022-07-24 12:16:24,029 INFO    SenderThread:63255 [sender.py:send_exit():374] handling runtime: 87
+2022-07-24 12:16:24,030 INFO    SenderThread:63255 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-24 12:16:24,031 INFO    SenderThread:63255 [sender.py:send_exit():380] send defer
+2022-07-24 12:16:24,031 DEBUG   SenderThread:63255 [sender.py:send_request():250] send_request: poll_exit
+2022-07-24 12:16:24,033 DEBUG   HandlerThread:63255 [handler.py:handle_request():140] handle_request: defer
+2022-07-24 12:16:24,034 INFO    HandlerThread:63255 [handler.py:handle_request_defer():163] handle defer: 0
+2022-07-24 12:16:24,035 DEBUG   SenderThread:63255 [sender.py:send_request():250] send_request: defer
+2022-07-24 12:16:24,035 INFO    SenderThread:63255 [sender.py:send_request_defer():389] handle sender defer: 0
+2022-07-24 12:16:24,035 INFO    SenderThread:63255 [sender.py:transition_state():393] send defer: 1
+2022-07-24 12:16:24,036 DEBUG   HandlerThread:63255 [handler.py:handle_request():140] handle_request: defer
+2022-07-24 12:16:24,037 INFO    HandlerThread:63255 [handler.py:handle_request_defer():163] handle defer: 1
+2022-07-24 12:16:24,073 INFO    Thread-12 :63255 [dir_watcher.py:_on_file_modified():286] file/dir modified: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files/output.log
+2022-07-24 12:16:24,075 INFO    Thread-12 :63255 [dir_watcher.py:_on_file_modified():286] file/dir modified: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files/wandb-summary.json
+2022-07-24 12:16:24,140 DEBUG   HandlerThread:63255 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-24 12:16:24,142 DEBUG   SenderThread:63255 [sender.py:send_request():250] send_request: defer
+2022-07-24 12:16:24,142 INFO    SenderThread:63255 [sender.py:send_request_defer():389] handle sender defer: 1
+2022-07-24 12:16:24,143 INFO    SenderThread:63255 [sender.py:transition_state():393] send defer: 2
+2022-07-24 12:16:24,144 DEBUG   SenderThread:63255 [sender.py:send_request():250] send_request: poll_exit
+2022-07-24 12:16:24,145 DEBUG   SenderThread:63255 [sender.py:send():236] send: stats
+2022-07-24 12:16:24,147 DEBUG   HandlerThread:63255 [handler.py:handle_request():140] handle_request: defer
+2022-07-24 12:16:24,147 INFO    HandlerThread:63255 [handler.py:handle_request_defer():163] handle defer: 2
+2022-07-24 12:16:24,148 DEBUG   SenderThread:63255 [sender.py:send_request():250] send_request: defer
+2022-07-24 12:16:24,148 INFO    SenderThread:63255 [sender.py:send_request_defer():389] handle sender defer: 2
+2022-07-24 12:16:24,149 INFO    SenderThread:63255 [sender.py:transition_state():393] send defer: 3
+2022-07-24 12:16:24,150 DEBUG   HandlerThread:63255 [handler.py:handle_request():140] handle_request: defer
+2022-07-24 12:16:24,150 INFO    HandlerThread:63255 [handler.py:handle_request_defer():163] handle defer: 3
+2022-07-24 12:16:24,151 DEBUG   SenderThread:63255 [sender.py:send_request():250] send_request: defer
+2022-07-24 12:16:24,151 INFO    SenderThread:63255 [sender.py:send_request_defer():389] handle sender defer: 3
+2022-07-24 12:16:24,151 INFO    SenderThread:63255 [sender.py:transition_state():393] send defer: 4
+2022-07-24 12:16:24,152 DEBUG   HandlerThread:63255 [handler.py:handle_request():140] handle_request: defer
+2022-07-24 12:16:24,152 INFO    HandlerThread:63255 [handler.py:handle_request_defer():163] handle defer: 4
+2022-07-24 12:16:24,153 DEBUG   SenderThread:63255 [sender.py:send():236] send: summary
+2022-07-24 12:16:24,154 INFO    SenderThread:63255 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-24 12:16:24,155 DEBUG   SenderThread:63255 [sender.py:send_request():250] send_request: defer
+2022-07-24 12:16:24,155 INFO    SenderThread:63255 [sender.py:send_request_defer():389] handle sender defer: 4
+2022-07-24 12:16:24,155 INFO    SenderThread:63255 [sender.py:transition_state():393] send defer: 5
+2022-07-24 12:16:24,156 DEBUG   HandlerThread:63255 [handler.py:handle_request():140] handle_request: defer
+2022-07-24 12:16:24,156 INFO    HandlerThread:63255 [handler.py:handle_request_defer():163] handle defer: 5
+2022-07-24 12:16:24,156 DEBUG   SenderThread:63255 [sender.py:send_request():250] send_request: defer
+2022-07-24 12:16:24,157 INFO    SenderThread:63255 [sender.py:send_request_defer():389] handle sender defer: 5
+2022-07-24 12:16:24,248 DEBUG   HandlerThread:63255 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-24 12:16:24,577 INFO    SenderThread:63255 [sender.py:transition_state():393] send defer: 6
+2022-07-24 12:16:24,577 DEBUG   SenderThread:63255 [sender.py:send_request():250] send_request: poll_exit
+2022-07-24 12:16:24,578 DEBUG   HandlerThread:63255 [handler.py:handle_request():140] handle_request: defer
+2022-07-24 12:16:24,578 INFO    HandlerThread:63255 [handler.py:handle_request_defer():163] handle defer: 6
+2022-07-24 12:16:24,579 DEBUG   SenderThread:63255 [sender.py:send_request():250] send_request: defer
+2022-07-24 12:16:24,579 INFO    SenderThread:63255 [sender.py:send_request_defer():389] handle sender defer: 6
+2022-07-24 12:16:24,579 INFO    SenderThread:63255 [dir_watcher.py:finish():353] shutting down directory watcher
+2022-07-24 12:16:24,680 DEBUG   HandlerThread:63255 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-24 12:16:25,075 INFO    Thread-12 :63255 [dir_watcher.py:_on_file_modified():286] file/dir modified: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files/config.yaml
+2022-07-24 12:16:25,078 INFO    SenderThread:63255 [dir_watcher.py:_on_file_modified():286] file/dir modified: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files/wandb-summary.json
+2022-07-24 12:16:25,079 INFO    SenderThread:63255 [dir_watcher.py:finish():383] scan: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files
+2022-07-24 12:16:25,080 INFO    SenderThread:63255 [dir_watcher.py:finish():397] scan save: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files/config.yaml config.yaml
+2022-07-24 12:16:25,081 INFO    SenderThread:63255 [dir_watcher.py:finish():397] scan save: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files/wandb-summary.json wandb-summary.json
+2022-07-24 12:16:25,082 INFO    SenderThread:63255 [dir_watcher.py:finish():397] scan save: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files/requirements.txt requirements.txt
+2022-07-24 12:16:25,083 INFO    SenderThread:63255 [dir_watcher.py:finish():397] scan save: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files/conda-environment.yaml conda-environment.yaml
+2022-07-24 12:16:25,084 INFO    SenderThread:63255 [dir_watcher.py:finish():397] scan save: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files/wandb-metadata.json wandb-metadata.json
+2022-07-24 12:16:25,084 INFO    SenderThread:63255 [dir_watcher.py:finish():397] scan save: /root/autodl-tmp/acnet/wandb/run-20220724_121451-rfpwyjm8/files/output.log output.log
+2022-07-24 12:16:25,084 INFO    SenderThread:63255 [sender.py:transition_state():393] send defer: 7
+2022-07-24 12:16:25,085 DEBUG   SenderThread:63255 [sender.py:send_request():250] send_request: poll_exit
+2022-07-24 12:16:25,101 DEBUG   HandlerThread:63255 [handler.py:handle_request():140] handle_request: defer
+2022-07-24 12:16:25,128 INFO    HandlerThread:63255 [handler.py:handle_request_defer():163] handle defer: 7
+2022-07-24 12:16:25,135 DEBUG   SenderThread:63255 [sender.py:send_request():250] send_request: defer
+2022-07-24 12:16:25,141 INFO    SenderThread:63255 [sender.py:send_request_defer():389] handle sender defer: 7
+2022-07-24 12:16:25,149 INFO    SenderThread:63255 [file_pusher.py:finish():171] shutting down file pusher

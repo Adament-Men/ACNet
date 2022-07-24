@@ -1,0 +1,5 @@
+checkpoints/
+__pycache__/
+resnet34-b627a593.pth
+INTERRUPTED.pth
+data/

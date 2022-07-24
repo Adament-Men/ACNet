@@ -1,0 +1,47 @@
+2022-07-24 00:07:17,360 INFO    MainThread:64904 [internal.py:wandb_internal():90] W&B internal server running at pid: 64904, started at: 2022-07-24 00:07:17.359730
+2022-07-24 00:07:17,369 INFO    WriterThread:64904 [datastore.py:open_for_write():75] open: /root/autodl-tmp/acnet/wandb/run-20220724_000714-fgz95rdl/run-fgz95rdl.wandb
+2022-07-24 00:07:17,378 DEBUG   SenderThread:64904 [sender.py:send():236] send: header
+2022-07-24 00:07:17,378 DEBUG   SenderThread:64904 [sender.py:send():236] send: run
+2022-07-24 00:07:17,389 INFO    SenderThread:64904 [sender.py:_maybe_setup_resume():493] checking resume status for None/ACNet/fgz95rdl
+2022-07-24 00:07:18,485 DEBUG   HandlerThread:64904 [handler.py:handle_request():140] handle_request: check_version
+2022-07-24 00:07:18,495 INFO    SenderThread:64904 [dir_watcher.py:__init__():216] watching files in: /root/autodl-tmp/acnet/wandb/run-20220724_000714-fgz95rdl/files
+2022-07-24 00:07:18,496 INFO    SenderThread:64904 [sender.py:_start_run_threads():815] run started: fgz95rdl with start time 1658592435
+2022-07-24 00:07:18,496 DEBUG   SenderThread:64904 [sender.py:send():236] send: summary
+2022-07-24 00:07:18,496 INFO    SenderThread:64904 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-24 00:07:18,497 DEBUG   SenderThread:64904 [sender.py:send_request():250] send_request: check_version
+2022-07-24 00:07:19,011 DEBUG   HandlerThread:64904 [handler.py:handle_request():140] handle_request: run_start
+2022-07-24 00:07:19,026 DEBUG   HandlerThread:64904 [meta.py:__init__():35] meta init
+2022-07-24 00:07:19,027 DEBUG   HandlerThread:64904 [meta.py:__init__():49] meta init done
+2022-07-24 00:07:19,027 DEBUG   HandlerThread:64904 [meta.py:probe():209] probe
+2022-07-24 00:07:19,033 DEBUG   HandlerThread:64904 [git.py:repo():29] git repository is invalid
+2022-07-24 00:07:19,033 DEBUG   HandlerThread:64904 [meta.py:_save_pip():53] save pip
+2022-07-24 00:07:19,034 DEBUG   HandlerThread:64904 [meta.py:_save_pip():67] save pip done
+2022-07-24 00:07:19,035 DEBUG   HandlerThread:64904 [meta.py:_save_conda():74] save conda
+2022-07-24 00:07:19,043 ERROR   HandlerThread:64904 [meta.py:_save_conda():83] Error saving conda packages
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/acnet/lib/python3.8/site-packages/wandb/sdk/internal/meta.py", line 79, in _save_conda
+    subprocess.call(
+  File "/root/miniconda3/envs/acnet/lib/python3.8/subprocess.py", line 340, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "/root/miniconda3/envs/acnet/lib/python3.8/subprocess.py", line 854, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/root/miniconda3/envs/acnet/lib/python3.8/subprocess.py", line 1702, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'conda'
+2022-07-24 00:07:19,046 DEBUG   HandlerThread:64904 [meta.py:_save_conda():84] save conda done
+2022-07-24 00:07:19,046 DEBUG   HandlerThread:64904 [meta.py:probe():247] probe done
+2022-07-24 00:07:19,060 DEBUG   SenderThread:64904 [sender.py:send():236] send: files
+2022-07-24 00:07:19,061 INFO    SenderThread:64904 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2022-07-24 00:07:19,087 DEBUG   HandlerThread:64904 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 00:07:19,090 DEBUG   SenderThread:64904 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 00:07:19,509 INFO    Thread-12 :64904 [dir_watcher.py:_on_file_created():269] file/dir created: /root/autodl-tmp/acnet/wandb/run-20220724_000714-fgz95rdl/files/wandb-metadata.json
+2022-07-24 00:07:19,515 INFO    Thread-12 :64904 [dir_watcher.py:_on_file_created():269] file/dir created: /root/autodl-tmp/acnet/wandb/run-20220724_000714-fgz95rdl/files/wandb-summary.json
+2022-07-24 00:07:19,516 INFO    Thread-12 :64904 [dir_watcher.py:_on_file_created():269] file/dir created: /root/autodl-tmp/acnet/wandb/run-20220724_000714-fgz95rdl/files/requirements.txt
+2022-07-24 00:07:19,517 INFO    Thread-12 :64904 [dir_watcher.py:_on_file_created():269] file/dir created: /root/autodl-tmp/acnet/wandb/run-20220724_000714-fgz95rdl/files/conda-environment.yaml
+2022-07-24 00:07:19,520 INFO    Thread-12 :64904 [dir_watcher.py:_on_file_created():269] file/dir created: /root/autodl-tmp/acnet/wandb/run-20220724_000714-fgz95rdl/files/output.log
+2022-07-24 00:07:19,805 DEBUG   SenderThread:64904 [sender.py:send():236] send: telemetry
+2022-07-24 00:07:19,806 DEBUG   SenderThread:64904 [sender.py:send():236] send: config
+2022-07-24 00:07:20,426 INFO    Thread-16 :64904 [upload_job.py:push():138] Uploaded file /tmp/tmpvy58l7t8wandb/23fnsu01-wandb-metadata.json
+2022-07-24 00:07:21,501 INFO    Thread-12 :64904 [dir_watcher.py:_on_file_modified():286] file/dir modified: /root/autodl-tmp/acnet/wandb/run-20220724_000714-fgz95rdl/files/output.log
+2022-07-24 00:07:23,505 INFO    Thread-12 :64904 [dir_watcher.py:_on_file_modified():286] file/dir modified: /root/autodl-tmp/acnet/wandb/run-20220724_000714-fgz95rdl/files/output.log
+2022-07-24 00:07:31,516 INFO    Thread-12 :64904 [dir_watcher.py:_on_file_modified():286] file/dir modified: /root/autodl-tmp/acnet/wandb/run-20220724_000714-fgz95rdl/files/output.log

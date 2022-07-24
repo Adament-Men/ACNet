@@ -1,0 +1,18 @@
+INFO: Starting training:
+        Epochs:          5
+        Batch size:      2
+        Learning rate:   2e-05
+        Training size:   9001
+        Validation size: 1000
+        Checkpoints:     True
+        Device:          cuda
+        Images scaling:  1.0
+        Mixed Precision: False
+
+Epoch 1/5:   0%|                                      | 0/9001 [00:09<?, ?img/s]
+Traceback (most recent call last):
+  File "/root/autodl-tmp/acnet/train.py", line 231, in <module>
+    train_net(net=net,
+  File "/root/autodl-tmp/acnet/train.py", line 130, in train_net
+    true_masks.unsqueze(1)
+AttributeError: 'Tensor' object has no attribute 'unsqueze'

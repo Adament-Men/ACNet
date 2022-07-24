@@ -1,0 +1,155 @@
+2022-07-24 11:42:57,030 INFO    MainThread:40312 [internal.py:wandb_internal():90] W&B internal server running at pid: 40312, started at: 2022-07-24 11:42:57.029262
+2022-07-24 11:42:57,042 INFO    WriterThread:40312 [datastore.py:open_for_write():75] open: /root/autodl-tmp/acnet/wandb/run-20220724_114254-gm4rhi8e/run-gm4rhi8e.wandb
+2022-07-24 11:42:57,049 DEBUG   SenderThread:40312 [sender.py:send():236] send: header
+2022-07-24 11:42:57,050 DEBUG   SenderThread:40312 [sender.py:send():236] send: run
+2022-07-24 11:42:57,059 INFO    SenderThread:40312 [sender.py:_maybe_setup_resume():493] checking resume status for None/ACNet/gm4rhi8e
+2022-07-24 11:42:57,878 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: check_version
+2022-07-24 11:42:57,888 INFO    SenderThread:40312 [dir_watcher.py:__init__():216] watching files in: /root/autodl-tmp/acnet/wandb/run-20220724_114254-gm4rhi8e/files
+2022-07-24 11:42:57,889 INFO    SenderThread:40312 [sender.py:_start_run_threads():815] run started: gm4rhi8e with start time 1658634175
+2022-07-24 11:42:57,889 DEBUG   SenderThread:40312 [sender.py:send():236] send: summary
+2022-07-24 11:42:57,889 INFO    SenderThread:40312 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-24 11:42:57,890 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: check_version
+2022-07-24 11:42:58,190 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: run_start
+2022-07-24 11:42:58,206 DEBUG   HandlerThread:40312 [meta.py:__init__():35] meta init
+2022-07-24 11:42:58,206 DEBUG   HandlerThread:40312 [meta.py:__init__():49] meta init done
+2022-07-24 11:42:58,206 DEBUG   HandlerThread:40312 [meta.py:probe():209] probe
+2022-07-24 11:42:58,213 DEBUG   HandlerThread:40312 [git.py:repo():29] git repository is invalid
+2022-07-24 11:42:58,213 DEBUG   HandlerThread:40312 [meta.py:_save_pip():53] save pip
+2022-07-24 11:42:58,214 DEBUG   HandlerThread:40312 [meta.py:_save_pip():67] save pip done
+2022-07-24 11:42:58,214 DEBUG   HandlerThread:40312 [meta.py:_save_conda():74] save conda
+2022-07-24 11:42:58,223 ERROR   HandlerThread:40312 [meta.py:_save_conda():83] Error saving conda packages
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/acnet/lib/python3.8/site-packages/wandb/sdk/internal/meta.py", line 79, in _save_conda
+    subprocess.call(
+  File "/root/miniconda3/envs/acnet/lib/python3.8/subprocess.py", line 340, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "/root/miniconda3/envs/acnet/lib/python3.8/subprocess.py", line 854, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/root/miniconda3/envs/acnet/lib/python3.8/subprocess.py", line 1702, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'conda'
+2022-07-24 11:42:58,226 DEBUG   HandlerThread:40312 [meta.py:_save_conda():84] save conda done
+2022-07-24 11:42:58,226 DEBUG   HandlerThread:40312 [meta.py:probe():247] probe done
+2022-07-24 11:42:58,238 DEBUG   SenderThread:40312 [sender.py:send():236] send: files
+2022-07-24 11:42:58,239 INFO    SenderThread:40312 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2022-07-24 11:42:58,266 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:42:58,269 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:42:58,664 DEBUG   SenderThread:40312 [sender.py:send():236] send: telemetry
+2022-07-24 11:42:58,664 DEBUG   SenderThread:40312 [sender.py:send():236] send: config
+2022-07-24 11:42:58,902 INFO    Thread-12 :40312 [dir_watcher.py:_on_file_created():269] file/dir created: /root/autodl-tmp/acnet/wandb/run-20220724_114254-gm4rhi8e/files/conda-environment.yaml
+2022-07-24 11:42:58,902 INFO    Thread-12 :40312 [dir_watcher.py:_on_file_created():269] file/dir created: /root/autodl-tmp/acnet/wandb/run-20220724_114254-gm4rhi8e/files/wandb-summary.json
+2022-07-24 11:42:58,902 INFO    Thread-12 :40312 [dir_watcher.py:_on_file_created():269] file/dir created: /root/autodl-tmp/acnet/wandb/run-20220724_114254-gm4rhi8e/files/wandb-metadata.json
+2022-07-24 11:42:58,903 INFO    Thread-12 :40312 [dir_watcher.py:_on_file_created():269] file/dir created: /root/autodl-tmp/acnet/wandb/run-20220724_114254-gm4rhi8e/files/requirements.txt
+2022-07-24 11:42:58,903 INFO    Thread-12 :40312 [dir_watcher.py:_on_file_created():269] file/dir created: /root/autodl-tmp/acnet/wandb/run-20220724_114254-gm4rhi8e/files/output.log
+2022-07-24 11:42:59,191 INFO    Thread-16 :40312 [upload_job.py:push():138] Uploaded file /tmp/tmp6oorxscqwandb/21yv4lnh-wandb-metadata.json
+2022-07-24 11:43:00,893 INFO    Thread-12 :40312 [dir_watcher.py:_on_file_modified():286] file/dir modified: /root/autodl-tmp/acnet/wandb/run-20220724_114254-gm4rhi8e/files/output.log
+2022-07-24 11:43:02,898 INFO    Thread-12 :40312 [dir_watcher.py:_on_file_modified():286] file/dir modified: /root/autodl-tmp/acnet/wandb/run-20220724_114254-gm4rhi8e/files/output.log
+2022-07-24 11:43:12,985 INFO    Thread-12 :40312 [dir_watcher.py:_on_file_modified():286] file/dir modified: /root/autodl-tmp/acnet/wandb/run-20220724_114254-gm4rhi8e/files/output.log
+2022-07-24 11:43:13,670 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:43:13,671 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:43:20,995 INFO    Thread-12 :40312 [dir_watcher.py:_on_file_modified():286] file/dir modified: /root/autodl-tmp/acnet/wandb/run-20220724_114254-gm4rhi8e/files/output.log
+2022-07-24 11:43:26,423 DEBUG   SenderThread:40312 [sender.py:send():236] send: stats
+2022-07-24 11:43:28,005 INFO    Thread-12 :40312 [dir_watcher.py:_on_file_modified():286] file/dir modified: /root/autodl-tmp/acnet/wandb/run-20220724_114254-gm4rhi8e/files/config.yaml
+2022-07-24 11:43:29,073 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:43:29,074 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:43:44,479 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:43:44,480 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:43:56,590 DEBUG   SenderThread:40312 [sender.py:send():236] send: stats
+2022-07-24 11:43:59,871 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:43:59,873 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:44:15,260 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:44:15,261 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:44:26,762 DEBUG   SenderThread:40312 [sender.py:send():236] send: stats
+2022-07-24 11:44:30,664 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:44:30,665 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:44:46,064 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:44:46,065 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:44:56,934 DEBUG   SenderThread:40312 [sender.py:send():236] send: stats
+2022-07-24 11:45:01,455 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:45:01,456 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:45:16,844 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:45:16,845 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:45:27,099 DEBUG   SenderThread:40312 [sender.py:send():236] send: stats
+2022-07-24 11:45:32,235 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:45:32,236 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:45:47,625 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:45:47,626 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:45:57,270 DEBUG   SenderThread:40312 [sender.py:send():236] send: stats
+2022-07-24 11:46:03,003 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:46:03,004 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:46:18,386 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:46:18,387 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:46:27,437 DEBUG   SenderThread:40312 [sender.py:send():236] send: stats
+2022-07-24 11:46:33,770 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:46:33,771 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:46:49,162 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:46:49,163 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:46:57,610 DEBUG   SenderThread:40312 [sender.py:send():236] send: stats
+2022-07-24 11:47:04,557 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:47:04,558 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:47:19,937 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:47:19,938 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:47:27,781 DEBUG   SenderThread:40312 [sender.py:send():236] send: stats
+2022-07-24 11:47:35,322 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:47:35,323 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:47:50,729 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:47:50,730 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:47:57,949 DEBUG   SenderThread:40312 [sender.py:send():236] send: stats
+2022-07-24 11:48:06,101 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:48:06,102 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:48:21,479 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:48:21,480 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:48:28,118 DEBUG   SenderThread:40312 [sender.py:send():236] send: stats
+2022-07-24 11:48:36,876 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:48:36,877 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:48:52,285 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:48:52,287 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:48:58,282 DEBUG   SenderThread:40312 [sender.py:send():236] send: stats
+2022-07-24 11:49:07,671 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-24 11:49:07,672 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: stop_status
+2022-07-24 11:49:18,725 WARNING MainThread:40312 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2022-07-24 11:49:18,733 DEBUG   SenderThread:40312 [sender.py:send():236] send: telemetry
+2022-07-24 11:49:21,318 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-24 11:49:21,319 DEBUG   SenderThread:40312 [sender.py:send():236] send: exit
+2022-07-24 11:49:21,320 INFO    SenderThread:40312 [sender.py:send_exit():372] handling exit code: 0
+2022-07-24 11:49:21,321 INFO    SenderThread:40312 [sender.py:send_exit():374] handling runtime: 383
+2022-07-24 11:49:21,322 INFO    SenderThread:40312 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-24 11:49:21,324 INFO    SenderThread:40312 [sender.py:send_exit():380] send defer
+2022-07-24 11:49:21,324 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: poll_exit
+2022-07-24 11:49:21,326 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: defer
+2022-07-24 11:49:21,327 INFO    HandlerThread:40312 [handler.py:handle_request_defer():163] handle defer: 0
+2022-07-24 11:49:21,327 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: defer
+2022-07-24 11:49:21,328 INFO    SenderThread:40312 [sender.py:send_request_defer():389] handle sender defer: 0
+2022-07-24 11:49:21,328 INFO    SenderThread:40312 [sender.py:transition_state():393] send defer: 1
+2022-07-24 11:49:21,328 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: defer
+2022-07-24 11:49:21,329 INFO    HandlerThread:40312 [handler.py:handle_request_defer():163] handle defer: 1
+2022-07-24 11:49:21,413 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: defer
+2022-07-24 11:49:21,413 INFO    SenderThread:40312 [sender.py:send_request_defer():389] handle sender defer: 1
+2022-07-24 11:49:21,414 INFO    SenderThread:40312 [sender.py:transition_state():393] send defer: 2
+2022-07-24 11:49:21,415 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: defer
+2022-07-24 11:49:21,416 DEBUG   SenderThread:40312 [sender.py:send():236] send: stats
+2022-07-24 11:49:21,416 INFO    HandlerThread:40312 [handler.py:handle_request_defer():163] handle defer: 2
+2022-07-24 11:49:21,419 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: defer
+2022-07-24 11:49:21,419 INFO    SenderThread:40312 [sender.py:send_request_defer():389] handle sender defer: 2
+2022-07-24 11:49:21,419 INFO    SenderThread:40312 [sender.py:transition_state():393] send defer: 3
+2022-07-24 11:49:21,420 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: defer
+2022-07-24 11:49:21,421 INFO    HandlerThread:40312 [handler.py:handle_request_defer():163] handle defer: 3
+2022-07-24 11:49:21,422 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: defer
+2022-07-24 11:49:21,422 INFO    SenderThread:40312 [sender.py:send_request_defer():389] handle sender defer: 3
+2022-07-24 11:49:21,422 INFO    SenderThread:40312 [sender.py:transition_state():393] send defer: 4
+2022-07-24 11:49:21,423 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: defer
+2022-07-24 11:49:21,423 INFO    HandlerThread:40312 [handler.py:handle_request_defer():163] handle defer: 4
+2022-07-24 11:49:21,424 DEBUG   SenderThread:40312 [sender.py:send():236] send: summary
+2022-07-24 11:49:21,426 INFO    SenderThread:40312 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-24 11:49:21,426 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: defer
+2022-07-24 11:49:21,426 INFO    SenderThread:40312 [sender.py:send_request_defer():389] handle sender defer: 4
+2022-07-24 11:49:21,426 INFO    SenderThread:40312 [sender.py:transition_state():393] send defer: 5
+2022-07-24 11:49:21,427 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: defer
+2022-07-24 11:49:21,428 INFO    HandlerThread:40312 [handler.py:handle_request_defer():163] handle defer: 5
+2022-07-24 11:49:21,428 DEBUG   HandlerThread:40312 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-24 11:49:21,428 DEBUG   SenderThread:40312 [sender.py:send_request():250] send_request: defer
+2022-07-24 11:49:21,429 INFO    SenderThread:40312 [sender.py:send_request_defer():389] handle sender defer: 5
+2022-07-24 11:49:21,480 INFO    Thread-12 :40312 [dir_watcher.py:_on_file_modified():286] file/dir modified: /root/autodl-tmp/acnet/wandb/run-20220724_114254-gm4rhi8e/files/wandb-summary.json
+2022-07-24 11:49:21,481 INFO    Thread-12 :40312 [dir_watcher.py:_on_file_modified():286] file/dir modified: /root/autodl-tmp/acnet/wandb/run-20220724_114254-gm4rhi8e/files/output.log
+2022-07-24 11:49:21,545 WARNING MainThread:40312 [internal.py:wandb_internal():153] Internal process interrupt: 2
+2022-07-24 11:49:21,546 ERROR   MainThread:40312 [internal.py:wandb_internal():156] Internal process interrupted.

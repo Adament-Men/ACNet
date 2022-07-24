@@ -1,0 +1,27 @@
+INFO: Starting training:
+        Epochs:          5
+        Batch size:      2
+        Learning rate:   2e-05
+        Training size:   9001
+        Validation size: 1000
+        Checkpoints:     True
+        Device:          cuda
+        Images scaling:  1.0
+        Mixed Precision: False
+Epoch 1/5:   0%|                                      | 0/9001 [00:00<?, ?img/s]/root/miniconda3/envs/acnet/lib/python3.8/site-packages/torch/nn/functional.py:1960: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+Epoch 1/5:   0%|                                      | 0/9001 [00:17<?, ?img/s]
+Traceback (most recent call last):
+  File "/root/autodl-tmp/acnet/train.py", line 228, in <module>
+    train_net(net=net,
+  File "/root/autodl-tmp/acnet/train.py", line 141, in train_net
+    grad_scaler.scale(loss).backward()
+  File "/root/miniconda3/envs/acnet/lib/python3.8/site-packages/torch/_tensor.py", line 396, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/root/miniconda3/envs/acnet/lib/python3.8/site-packages/torch/autograd/__init__.py", line 166, in backward
+    grad_tensors_ = _make_grads(tensors, grad_tensors_, is_grads_batched=False)
+  File "/root/miniconda3/envs/acnet/lib/python3.8/site-packages/torch/autograd/__init__.py", line 68, in _make_grads
+    new_grads.append(torch.ones_like(out, memory_format=torch.preserve_format))
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.

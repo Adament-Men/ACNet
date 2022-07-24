@@ -1,0 +1,18 @@
+INFO: Starting training:
+        Epochs:          5
+        Batch size:      2
+        Learning rate:   2e-05
+        Training size:   9001
+        Validation size: 1000
+        Checkpoints:     True
+        Device:          cuda
+        Images scaling:  1.0
+        Mixed Precision: False
+Epoch 1/5:   0%|                                      | 0/9001 [01:13<?, ?img/s]
+INFO: Saved interrupt
+Traceback (most recent call last):
+  File "/root/autodl-tmp/acnet/train.py", line 231, in <module>
+    train_net(net=net,
+  File "/root/autodl-tmp/acnet/train.py", line 133, in train_net
+    masks_pred = net(images)
+KeyboardInterrupt
