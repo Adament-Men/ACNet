@@ -18,7 +18,7 @@ from model import ACNet
 
 dir_img = Path('./data/traincrop/img/')
 dir_mask = Path('./data/traincrop/mask/')
-dir_checkpoint = Path('./checkpoints/')
+dir_checkpoint = Path('./checkpoints23_13/')
 
 
 def dice_coeff(input: Tensor, target: Tensor, reduce_batch_first: bool = False, epsilon=1e-6):
@@ -134,7 +134,7 @@ def train_net(net,
                 # true_masks = true_masks // 255.0
                 m1 = true_masks[0].cpu().numpy()
                 loss = criterion(masks_pred, true_masks) \
-                       + dice_loss(torch.sigmoid(masks_pred).float(),
+                       + dice_loss(masks_pred.float(),
                                    true_masks.float(),
                                    multiclass=False)
 
@@ -191,9 +191,9 @@ def train_net(net,
 
 def get_args():
     parser = argparse.ArgumentParser(description='Train the UNet on images and target masks')
-    parser.add_argument('--epochs', '-e', metavar='E', type=int, default=20, help='Number of epochs')
+    parser.add_argument('--epochs', '-e', metavar='E', type=int, default=200, help='Number of epochs')
     parser.add_argument('--batch-size', '-b', dest='batch_size', metavar='B', type=int, default=8, help='Batch size')
-    parser.add_argument('--learning-rate', '-l', metavar='LR', type=float, default=1e-5,
+    parser.add_argument('--learning-rate', '-l', metavar='LR', type=float, default=1e-6,
                         help='Learning rate', dest='lr')
     parser.add_argument('--load', '-f', type=str, default=True, help='Load model from a .pth file')
     parser.add_argument('--scale', '-s', type=float, default=1.0, help='Downscaling factor of the images')
